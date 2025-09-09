@@ -10,7 +10,7 @@ btnBuscar.addEventListener('click', criarImagens)
 async function criarImagens(){
     const raca = document.getElementById('search').value
     const imagens = await buscarImagem(raca)
-    main.textContent = ""    
+    main.replaceChildren()    
     imagens.forEach((url) => {
         const img = document.createElement('img')
         img.src = url
